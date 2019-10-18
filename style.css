@@ -35,7 +35,7 @@ body {
    display: flex;
    justify-content: center;
    flex-direction: column;
-
+   background-color: black;
    color: white;
    text-shadow: 0 0 20px #fff, 0 0 10px #fff, 0 0 50px #ff0fad, 0 0 50px #ff0fad;
 }
