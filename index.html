@@ -1,29 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Hacker Pub Quiz</title>
    <script id='question-template' type="text/x-handlebars-template">
-      <h1>Question {{index}}</h1>
-      <p>{{{question}}}</p>
-      <div id='choices'>
-         {{#each choices}}
-         <div>{{{this}}}</div>
-         {{/each}}
+      <h1 class="title">Hacker Pub Quiz {{index}}</h1>
+      <p class="content box question">{{{question}}}</p>
+      <div class="content" id='choices'>
+         <div class="choiceAB">
+               <div class="choice">
+                     <div class="choice-text">A {{choiceA}}</div>
+                  </div>
+                  <div class="choice">
+                     <div class="choice-text">B {{choiceB}}</div>
+                  </div>
+
+         </div>
+         <div class="choiceCD">
+               <div class="choice">
+                  <div class="choice-text">C {{choiceC}}</div>
+               </div>
+               <div class="choice">
+                  <div class="choice-text">D {{choiceD}}</div>
+               </div>
+         </div>
       </div>
-      <button id='next-button'>Show Answer</button>
+      <button class="button" id='next-button'>Show Answer</button>
    </script>
    <script id='answer-template' type="text/x-handlebars-template">
-      <h1>Answer {{index}}</h1>
-      <p>{{{answer}}}</p>
-      <button id='next-button'>Next Question</button>
+      <h1 class="title">Answer {{index}}</h1>
+      <p class="box question content">{{{answer}}}</p>
+      <button class="button" id='next-button'>Next Question</button>
    </script>
+
+   <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-   <div id='app'></div>
+   <section class="section">
+      <div class="container">
+         <div id='app'></div>
+      </div>
+   </section>
 </body>
-   <script src="index.js"></script>
+<script src="index.js"></script>
+
 </html>

@@ -1,0 +1,87 @@
+@font-face {
+   font-family: 'daftfont';
+   src: 
+   url("//db.onlinewebfonts.com/t/80af27dce2efeecc910be0be75728730.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/80af27dce2efeecc910be0be75728730.woff") format("woff")
+}
+
+body {
+   font-family: 'Inconsolata', monospace;
+   background-image: url('img/main-back2.jpg');
+   background-size: 100vw 100vh;
+   min-height: 100vh;
+}
+
+.title {
+   font-size: 50px;
+   font-family: 'daftfont';
+   color: #000;
+   text-shadow: 0 0 20px #fff, 0 0 10px #fff, 0 0 50px #ff0fad, 0 0 50px #ff0fad, 0 0 40px #ff0fad, 0 0 100px #ff0fad, 0 0 75px #ff0fad;
+}
+
+.question {
+   font-size: 36px;
+   font-weight: 700;
+   color: #43bae2;
+   text-shadow: 0 0 20px #000, 0 0 10px #000
+}
+
+.box {
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 1.0);
+}
+
+body {
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}
+
+
+
+.choiceAB {
+   width: 60%;
+   margin: auto;
+   display: flex;
+   justify-content: space-between;
+}
+.choiceCD {
+   width: 80%;
+   margin: 40px auto;
+   display: flex;
+   justify-content: space-between;
+}
+
+.choice {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   border-radius: 20px;
+   padding: 10px 20px;
+   width: 200px;
+   height: 100px;
+   font-size: 18px;
+   background-color: rgba(0, 0, 0, 0.5);
+   color: white;
+   box-shadow: 0 0 20px #fff, 0 0 10px #fff, 0 0 50px #ff0fad, 0 0 50px #ff0fad;
+   text-shadow: 0 0 20px #fff, 0 0 10px #fff, 0 0 50px #ff0fad, 0 0 50px #ff0fad;
+}
+
+.button {
+   font-family: 'Inconsolata', monospace;
+
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 20px;
+      padding: 20px 40px;
+
+      font-size: 24px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      box-shadow: 0 0 20px #fff, 0 0 10px #fff, 0 0 50px #ff0fad, 0 0 50px #ff0fad;
+      text-shadow: 0 0 20px #fff, 0 0 10px #fff, 0 0 50px #ff0fad, 0 0 50px #ff0fad;
+}
+
+
