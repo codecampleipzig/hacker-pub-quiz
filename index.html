@@ -17,7 +17,6 @@
                   <div class="choice">
                      <div class="choice-text">B {{choiceB}}</div>
                   </div>
-
          </div>
          <div class="choiceCD">
                <div class="choice">
@@ -28,14 +27,21 @@
                </div>
          </div>
       </div>
-      <button class="button" id='next-button'>Show Answer</button>
+      <button class="button next-button" id='next-button'>Show Answer</button>
    </script>
    <script id='answer-template' type="text/x-handlebars-template">
       <h1 class="title">Answer {{index}}</h1>
       <p class="box question content">{{{answer}}}</p>
       <button class="button" id='next-button'>Next Question</button>
    </script>
-
+   <script id='intro-template' type="text/x-handlebars-template">
+      <h1 class="title">Setup</h1>
+      <p class="box question content">How many teams?</p>
+         <button class='button team-selector' data-num='1'>I don't have friends</button>
+         <button class='button team-selector' data-num='2'>2 Teams</button>
+         <button class='button team-selector' data-num='3'>3 Teams</button>
+         <button class='button team-selector' data-num='4'>4 Teams</button>
+   </script>
    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap" rel="stylesheet">
 </head>
 

@@ -7,6 +7,7 @@ const app = document.getElementById ('app');
 
 const questionTemplate = handlebars.compile (document.getElementById('question-template').innerHTML);
 const answerTemplate = handlebars.compile (document.getElementById('answer-template').innerHTML);
+const introTemplate = handlebars.compile (document.getElementById ('intro-template').innerHTML);
 
 var questions = [];
 function fetchQuestions(callback) {
@@ -36,6 +37,8 @@ function randomArray (array) {
 function getChoices (question) {
    return randomArray ([...question.incorrect_answers, question.correct_answer]);
 }
+
+const scores = []
 
 const routes = {
    'question' : {
@@ -71,6 +74,23 @@ const routes = {
             navigate ('question', {index : index + 1});
          })
       }
+   },
+   'intro' : {
+      render : function () {
+         return introTemplate ({})
+      },
+      script : function () {
+
+         document.querySelectorAll('.team-selector').forEach (function (selector) {
+            selector.addEventListener ('click', function (e) {
+               const numTeams = Number (selector.dataset.num);
+               for (var i = 0; i < numTeams; i++) {
+                  scores.push (0);
+               }
+               navigate ('question', {index: 1});
+            })
+         })
+      }
    }
 }
 
@@ -81,5 +101,5 @@ function navigate (path, params = {}) {
 }
 
 fetchQuestions(function() {
-   navigate ('question', {index: 0})
+   navigate ('intro');
 });
