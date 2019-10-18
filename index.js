@@ -1,5 +1,6 @@
 import 'bulma/css/bulma.css'
 import './style.css'
+import './scoring.css'
 
 import handlebars from 'handlebars';
 
@@ -51,7 +52,8 @@ const routes = {
             choiceB: choices[1],
             choiceC: choices[2],
             choiceD: choices[3],
-            index: index + 1
+            index: index + 1,
+            scores
          });
       },
       script : function ({index}) {
@@ -66,7 +68,8 @@ const routes = {
          return answerTemplate ({
             answer: questions[index]['correct_answer'],
             index: index + 1,
-            teams: [{id: 1}, {id: 2}]
+            teams: [{id: 1}, {id: 2}],
+            scores
          })
       },
       script : function ({index}) {
@@ -86,7 +89,7 @@ const routes = {
             selector.addEventListener ('click', function (e) {
                const numTeams = Number (selector.dataset.num);
                for (var i = 0; i < numTeams; i++) {
-                  scores.push (0);
+                  scores.push ({name: "Team " + (i + 1), score: 0});
                }
                navigate ('question', {index: 1});
             })
@@ -102,5 +105,5 @@ function navigate (path, params = {}) {
 }
 
 fetchQuestions(function() {
-   navigate ('answer', {index: 1});
+   navigate ('intro');
 });
