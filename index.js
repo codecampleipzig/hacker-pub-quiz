@@ -68,13 +68,19 @@ const routes = {
          return answerTemplate ({
             answer: questions[index]['correct_answer'],
             index: index + 1,
-            teams: [{id: 1}, {id: 2}],
+            teams: scores,
             scores
          })
       },
       script : function ({index}) {
          document.getElementById ('next-button').addEventListener ('click', function (e) {
             e.preventDefault();
+            document.querySelectorAll ('input').forEach (function (input) {
+               console.log (input.dataset.id);
+               console.log (input.value);
+               scores[input.dataset.id - 1].score += input.checked ? 1 : 0;
+            });
+
             navigate ('question', {index : index + 1});
          })
       }
@@ -89,7 +95,7 @@ const routes = {
             selector.addEventListener ('click', function (e) {
                const numTeams = Number (selector.dataset.num);
                for (var i = 0; i < numTeams; i++) {
-                  scores.push ({name: "Team " + (i + 1), score: 0});
+                  scores.push ({name: "Team " + (i + 1), score: 0, id: i + 1});
                }
                navigate ('question', {index: 1});
             })
