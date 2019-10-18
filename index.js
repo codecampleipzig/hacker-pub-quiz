@@ -13,7 +13,7 @@ const introTemplate = handlebars.compile (document.getElementById ('intro-templa
 var questions = [];
 function fetchQuestions(callback) {
    const request =  new XMLHttpRequest();
-   request.open ("GET", "https://opentdb.com/api.php?amount=20&category=9&difficulty=medium&type=multiple"); 
+   request.open ("GET", "https://opentdb.com/api.php?amount=100&category=9&difficulty=easy&type=multiple"); 
    request.send();
   
    // Do something, if the server doesn't respond
