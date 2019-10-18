@@ -90,4 +90,16 @@ body {
       text-shadow: 0 0 20px #fff, 0 0 10px #fff, 0 0 50px #ff0fad, 0 0 50px #ff0fad;
 }
 
+.gotright-box {
+   margin-bottom: 2em;
+}
 
+.gotright-box label.checkbox {
+   display: block;
+   font-size: 25px;
+   line-height: 2;
+}
+
+.gotright-box label.checkbox:hover, .gotright-box label.checkbox:active {
+   color: #ff0fad
+}

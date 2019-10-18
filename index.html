@@ -32,10 +32,10 @@
    <script id='answer-template' type="text/x-handlebars-template">
       <h1 class="title">Answer {{index}}</h1>
       <p class="box question content">{{{answer}}}</p>
-      <div class="gotright-box">
+      <div class="gotright-box content">
          {{#each teams}}
             <label class="checkbox">
-               <input type="checkbox" data-id={{team.id}}>Team {{this.id}}</div>
+               <input type="checkbox" data-id="{{team.id}}"> Team {{this.id}}
             </label>
          {{/each}}
       </div>
