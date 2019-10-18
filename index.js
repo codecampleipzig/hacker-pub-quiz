@@ -65,7 +65,8 @@ const routes = {
       render : function ({index}) {
          return answerTemplate ({
             answer: questions[index]['correct_answer'],
-            index: index + 1
+            index: index + 1,
+            teams: [{id: 1}, {id: 2}]
          })
       },
       script : function ({index}) {
@@ -101,5 +102,5 @@ function navigate (path, params = {}) {
 }
 
 fetchQuestions(function() {
-   navigate ('intro');
+   navigate ('answer', {index: 1});
 });

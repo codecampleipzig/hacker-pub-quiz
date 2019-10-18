@@ -27,11 +27,19 @@
                </div>
          </div>
       </div>
-      <button class="button next-button" id='next-button'>Show Answer</button>
+      <button class="button" id='next-button'>Show Answer</button>
    </script>
    <script id='answer-template' type="text/x-handlebars-template">
       <h1 class="title">Answer {{index}}</h1>
       <p class="box question content">{{{answer}}}</p>
+      <div class="gotright-box">
+         {{#each teams}}
+            <label class="checkbox">
+               <input type="checkbox" data-id={{team.id}}>Team {{this.id}}</div>
+            </label>
+         {{/each}}
+      </div>
+
       <button class="button" id='next-button'>Next Question</button>
    </script>
    <script id='intro-template' type="text/x-handlebars-template">

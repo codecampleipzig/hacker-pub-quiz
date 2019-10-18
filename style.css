@@ -35,9 +35,14 @@ body {
    display: flex;
    justify-content: center;
    flex-direction: column;
+
+   color: white;
+   text-shadow: 0 0 20px #fff, 0 0 10px #fff, 0 0 50px #ff0fad, 0 0 50px #ff0fad;
 }
 
-
+.input {
+   margin: 20px;
+}
 
 .choiceAB {
    width: 60%;
@@ -67,9 +72,6 @@ body {
    text-shadow: 0 0 20px #fff, 0 0 10px #fff, 0 0 50px #ff0fad, 0 0 50px #ff0fad;
 }
 
-.next-button {
-   left: 0px;
-}
 
 .button {
    font-family: 'Inconsolata', monospace;
